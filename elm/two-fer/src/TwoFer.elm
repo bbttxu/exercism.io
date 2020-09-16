@@ -1,13 +1,8 @@
 module TwoFer exposing (twoFer)
 
-twoFer : Maybe String -> String
-twoFer input =
-    let 
-        output = case input of
-            Just name -> name
-            _ -> "you"
+import Maybe exposing (withDefault)
 
-    in 
-        "One for " ++ output ++ ", one for me."
+twoFer : Maybe String -> String
+twoFer input = "One for " ++ withDefault "you" input ++ ", one for me."
 
     
