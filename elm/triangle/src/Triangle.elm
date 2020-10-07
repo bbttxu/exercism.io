@@ -51,5 +51,4 @@ triangleKind x y z =
             case uniqueSides list of
                 1 -> Result.Ok Equilateral
                 2 -> Result.Ok Isosceles
-                3 -> Result.Ok Scalene
-                _ -> Result.Err "Sorry, I don't know how to handle that."
+                _ -> Result.Ok Scalene
